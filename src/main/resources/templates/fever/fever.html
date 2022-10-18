@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fever</title>
+    <link href="logo-social" rel="icon">
+    <link rel ="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container"></div>
+<div class="text-center">
+    <h3>Contact Information</h3>
+</div>
+<form th:action="@{fever}" th:object="${fever}" method="post" style="max-width: 500px; margin: 0 auto">
+    <fieldset>
+        <legend>Enter Temperature</legend>
+        <div class="mb-3">
+            <label  class="form-label">Temperature</label>
+            <input th:field="*{temperature}" id="fever" name="fever" type="text" name="address" class="form-control" placeholder="Enter Temperature">
+        </div>
+<br>
+        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+
+    </fieldset>
+</form>
+</body>
+</html>
